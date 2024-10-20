@@ -1,9 +1,8 @@
 name: daily-report
 
 on:
-  # Uncomment the following to schedule the action every 5 minutes
-  # schedule:
-  #   - cron: '*/5 * * * *'
+  schedule:
+    - cron: '0 0 * * *'  # Sends email once a day
   workflow_dispatch:
 
 jobs:
