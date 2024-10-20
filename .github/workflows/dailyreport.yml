@@ -1,6 +1,7 @@
 name: daily-report
 
 on:
+  # Uncomment the following to schedule the action every 5 minutes
   # schedule:
   #   - cron: '*/5 * * * *'
   workflow_dispatch:
@@ -10,9 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      
+      # Step to install dependencies
+      - name: Install dependencies
+        run: pip install requests
+      
+      # Step to run the email sending Python code
       - name: Run email code
         env:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
