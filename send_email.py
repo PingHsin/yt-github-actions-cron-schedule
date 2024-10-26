@@ -27,6 +27,6 @@ Current weather in Seattle:
 context = ssl.create_default_context()
 
 # Sending the email
-with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-    server.login(USERNAME, PASSWORD)
-    server.sendmail(USERNAME, USERNAME, message.encode('utf-8'))  # Encode message as UTF-8
+#with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+#    server.login(USERNAME, PASSWORD)
+#    server.sendmail(USERNAME, USERNAME, message.encode('utf-8'))  # Encode message as UTF-8
